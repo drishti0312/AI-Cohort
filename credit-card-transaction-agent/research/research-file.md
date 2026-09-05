@@ -11,7 +11,7 @@ because the true state of the transaction, i.e., whether the transaction is legi
 
 ## Project Objective
 
-Design an AI agent that can make decisions and determine whether the credit card transaction is legit or not.
+Design an AI agent that can make decisions and determine whether the credit card transactions when the true state - legitimate or fraudelent - is unknown. The agent estimates fraud risk, considers the cost of different actions, and can request additional information before making a final decision.
 
 The agent should:
 - Observe the transaction evidence.
@@ -103,7 +103,7 @@ The goal is to create an AI Agent that will make better decisions under differen
 1. What is the usual spending pattern of the cardholder?
 2. How frequently does the cardholder use the card?
 3. Is the merchant familiar?
-4. Is the location new, or has the cardholder previously done the transaction from that particular location?
+4. Is the location new, or has the cardholder previously done the transaction at that particular location?
 
 ### Action questions
 #### Approve
@@ -137,15 +137,19 @@ Possible cost -
 4. Chargebacks
 ---
 ## Claims that require a source or an experiment
-| Claim                                                           | Needs a source? | Needs a test? |
-| --------------------------------------------------------------- | --------------- | ------------- |
-| Fraudulent transactions are rare.                               | Yes             | Yes           |
-| Fraud detection is a class-imbalance problem.                   | Yes             | Yes           |
-| Sequence models outperform transaction-level models.            | Yes             | Yes           |
-| Asking customers additional questions improves fraud detection. | Yes             | Yes           |
-| Human review reduces fraud losses.                              | Yes             | Yes           |
-| Concept drift reduces model performance over time.              | Yes             | Yes           |
-| Dynamic risk scoring improves detection.                        | Yes             | Yes           |
-| Explainable AI improves analyst decision-making.                | Yes             | Yes           |
-| Real-time systems must balance speed and accuracy.              | Yes             | Yes           |
-| False positives damage customer experience.                     | Yes             | Yes           |
+| Claim                                                                  | Needs a source? | Needs a test? |
+| ---------------------------------------------------------------        | --------------- | ------------- |
+| Fraudulent transactions are rare.                                      | Yes             | Yes           |
+| Fraud detection is a class-imbalance problem.                          | Yes             | Yes           |
+| Sequence models outperform transaction-level models.                   | Yes             | Yes           |
+| Asking customers additional questions improves fraud detection.        | Yes             | Yes           |
+| Human review reduces fraud losses.                                     | Yes             | Yes           |
+| Concept drift reduces model performance over time.                     | Yes             | Yes           |
+| Dynamic risk scoring improves detection.                               | Yes             | Yes           |
+| Explainable AI improves analyst decision-making.                       | Yes             | Yes           |
+| Real-time systems must balance speed and accuracy.                     | Yes             | Yes           |
+| False positives damage customer experience.                            | Yes             | Yes           |
+| A sequential agent can use intermediate actions to gather information. |             Yes |           Yes |
+| Different actions can have different business/customer costs.          |             Yes |           Yes |
+| A fraud-risk belief can be used to choose between actions.             |             Yes |           Yes |
+
